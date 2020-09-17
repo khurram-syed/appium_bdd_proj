@@ -26,10 +26,7 @@ config.capabilities=[
 config.cucumberOpts.tagExpression=''//'@androidDialog'
 config.cucumberOpts.require= require('glob').sync('./test/steps/androidSteps/**/*.js')
 config.afterStep= function ({ uri, feature, step }, context, { error, result, duration, passed, retries }) {
-//    console.log("Error ****===========-------> :",error)
-//    console.log("result ****===========-------> :",result)
-//    console.log("passed ****===========-------> :",passed)
-//    console.log("step ****===========-------> :",step)
+
     if (!passed) {
      try{  
        console.log("----->**** Taking Screenshot in ANDROID *****<-------- :")
