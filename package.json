@@ -1,0 +1,40 @@
+{
+  "name": "appium_bdd_proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cleandir": "cleandir ./reports/allure-results",
+    "test": "npm run cleandir && wdio ./wdio.browser.conf.js",
+    "android.app": "wdio ./android.conf.js",
+    "iOS.app": "wdio ./iOS.conf.js",
+    "test.all": "npm test && npm run android.app && npm run iOS.app",
+    "app.all": "npm run android.app && npm run iOS.app",
+    "allure-report": "node_modules/.bin/allure generate --clean ./reports/allure-results && allure open"
+  },
+  "keywords": [],
+  "author": "K Syed",
+  "license": "ISC",
+  "dependencies": {
+    "allure-commandline": "^2.13.0",
+    "cucumber": "6.0.2",
+    "cucumber-tag-expressions": "1.1.1",
+    "junit-viewer": "^4.11.1"
+  },
+  "devDependencies": {
+    "@rpii/wdio-html-reporter": "^6.1.1",
+    "@wdio/allure-reporter": "^6.4.7",
+    "@wdio/appium-service": "^6.4.7",
+    "@wdio/cli": "^6.5.0",
+    "@wdio/cucumber-framework": "^6.5.0",
+    "@wdio/local-runner": "^6.5.0",
+    "@wdio/selenium-standalone-service": "^6.4.7",
+    "@wdio/spec-reporter": "^6.4.7",
+    "@wdio/sync": "^6.5.0",
+    "chai": "^4.2.0",
+    "clean-dir": "^1.0.3",
+    "glob": "^7.1.6",
+    "wdio-html-reporter": "^1.0.2",
+    "wdio-mochawesome-reporter": "^4.0.0"
+  }
+}
