@@ -22,7 +22,7 @@ When(/^user clicks on the \"(.*)\" button$/, (item) => {
    }else if(item=="Buy Now"){
       basePage.webWaitForEnabled(productPage.buyNowBtn)
       basePage.webClick(productPage.buyNowBtn);
-      expect(true).to.be.false;
+     // expect(true).to.be.false;
    }
 
   //  basePage.waitToLoad(2)
@@ -42,7 +42,7 @@ Then('user should be seeing the review label', ()=> {
   // var ifVisible = browser.isVisible('#comment-form > h3');
   
   //assert.equal(ifVisible,true);
-  expect(isDisplayed).to.equal(false, 'Visible is true..!');
+  expect(isDisplayed).to.equal(true, 'Visible is true..!');
   basePage.waitToLoad()
 })
 

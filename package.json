@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cleandir": "cleandir ./reports/allure-results",
-    "test": "npm run cleandir && wdio ./wdio.browser.conf.js",
+    "test": "wdio ./wdio.browser.conf.js",
     "android.app": "wdio ./android.conf.js",
     "iOS.app": "wdio ./iOS.conf.js",
     "test.all": "npm test && npm run android.app && npm run iOS.app",
