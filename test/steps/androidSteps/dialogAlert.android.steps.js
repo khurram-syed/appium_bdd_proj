@@ -70,7 +70,7 @@ Given('user navigates to the Android app', function() {
         driver.saveScreenshot('./screenshots/landscape.png')
         driver.back()
         driver.setOrientation('PORTRAIT')
-        expect(false).to.be.true
+       // expect(false).to.be.true
      }else if(viewName=="Tabs Views"){
          checkAllTabs()
    }
