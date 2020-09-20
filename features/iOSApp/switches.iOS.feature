@@ -7,14 +7,14 @@ Feature: 5002- Switches - Yes - No
      Given iOS user navigates to the app
   
   @iOS5002_1
-  Scenario: 5002_1- Check the Switches
+  Scenario: 5002_1- Check the Switches Positive
      When iOS user clicks on the "switchesMain" button
      And iOS user clicks on the "switches1st" button
      And iOS user clicks on the "switches2nd" button
      Then iOS user should do some extra seteps for "Failing the Step"
  
    @iOS5002_2
-  Scenario: 5002_2- Check the Switches
+  Scenario: 5002_2- Check the Switches Negative
      When iOS user clicks on the "switchesMain" button
      And iOS user clicks on the "switches1st" button
      And iOS user clicks on the "switches2nd" button
