@@ -39,9 +39,9 @@ Given('iOS user navigates to the app', function() {
         console.log("*** Switch Button 1 Value :",switches.switchBtns[0].getAttribute('value'));
         console.log("*** Switch Button 2 Value :",switches.switchBtns[1].getAttribute('value'));
      }else if(viewName=="Failing the Step"){
-        expect(true).to.be.false
+        expect(true).to.be.true
      }else if(viewName=="Failing Sheet"){
-        expect(true).to.be.false
+        expect(true).to.be.true
      }
      else{
          throw Error(`No View Name ${viewName} found...!!`)
