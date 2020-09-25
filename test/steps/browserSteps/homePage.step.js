@@ -3,6 +3,7 @@ var homePage = require('../../../pages/webBrowser/home.page');
 var productPage = require('../../../pages/webBrowser/product.page.js');
 var basePage = require('../../../pages/webBrowser/base.page');
 const { expect } = require('chai');
+require('dotenv').config()
 
 //Comenting on homePage.Step
 Given('user navigates to the site', function() {
@@ -22,7 +23,7 @@ When(/^user clicks on the \"(.*)\" button$/, (item) => {
    }else if(item=="Buy Now"){
       basePage.webWaitForEnabled(productPage.buyNowBtn)
       basePage.webClick(productPage.buyNowBtn);
-     // expect(true).to.be.false;
+   //   expect(true).to.be.false;
    }
 
   //  basePage.waitToLoad(2)

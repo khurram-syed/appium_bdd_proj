@@ -9,7 +9,6 @@ config.capabilities = [{
     browserName: 'chrome',
     acceptInsecureCerts: true
 }]
-config.cucumberOpts.tagExpression='@home'
 
 config.baseUrl=baseURL
 config.cucumberOpts.tagExpression=''

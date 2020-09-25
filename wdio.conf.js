@@ -1,7 +1,16 @@
 var glop = require('glob')
+require('dotenv').config();
+console.log("************+++++++Sauce Username :",process.env.SAUCE_USERNAME)
 var baseURL='http://www.kevinlamping.com/webdriverio-course-content/';
+
 exports.config = {
-    //
+    // ====================
+    // FOR REMOTE DESKTOP CLOUD [Browserstack, Saucelab]
+    // ====================
+    user: process.env.BSTACK_USERNAME,
+    key : process.env.BSTACK_ACCESS_KEY,
+    
+
     // ====================
     // Runner Configuration
     // ====================
@@ -220,7 +229,8 @@ exports.config = {
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
     before: function (capabilities, specs) {
-        expect = require('chai').expect;
+        global.expect = require('chai').expect;
+        console.log("************++++before+++Sauce Username :",process.env.SAUCE_USERNAME)
     },
     /**
      * Runs before a WebdriverIO command gets executed.
