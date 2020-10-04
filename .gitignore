@@ -45,3 +45,4 @@ test-report/*
 junit*.xml
 reports
 .vscode
+.DS_Store
